@@ -124,8 +124,6 @@ main section{
     gap: 70px;
     align-items: center;
     padding: 60px;
-    
-
 }
 .feature-frame ,.feature-details{
     width: 50%;
@@ -168,13 +166,13 @@ span.span2{
     flex-direction: row;
     align-items: center;
     gap: 140px;
-    
 }
 .blogs-details{
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: relative;
+    flex-wrap: wrap;
     /* padding: 20px 0; */
 }
 .blogs-details , .blog-img{
@@ -188,8 +186,6 @@ span.span2{
     padding-left: 15px;
     margin: 25px 0;
     border-left: 5px solid #FF900E;
-    
-    
 }
 .blog {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.414);
@@ -205,13 +201,10 @@ button:hover{
     cursor: pointer;
 }
 .btn-secondary{
-    
     position: absolute;
     bottom: 0;
     left: 550px;
     padding: 45px 42px;
-    width: 342px;
-    height: 200px;
     background: #FF900E;
     border-radius: 8px;
     border: 0px solid white;
@@ -238,12 +231,12 @@ button:hover{
     font-size: 45px;
     line-height: 53px;
  } */
+
 .fact-cards{
     display: flex;
     text-align: center;
     justify-content: space-between;
-    margin: 100px 0;
-    
+    margin: 100px 0; 
 }
 
 .fact{
@@ -307,7 +300,9 @@ div.location {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+
 }
 .sponspons-img img{
         opacity: 0.5;
@@ -336,24 +331,100 @@ footer{
 /* ---------------------------------
     Responsive media quaries
 */
-/* .display{
+.display{
     display: none;
-} */
+}
 @media only screen  and (max-width:576px){
-    header{
-        padding: 0;
+    header,main{
+        padding: 20px 10px;
         margin: 0;
     }
     header nav,ul.nav-list{
-        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 20px 0;
+        
     }
-    div.nav-div{
+    div.nav-div,.feature-frame ,.feature-details,.blogs-details , .blog-img{
         width: 100%;  
+    }
+    .top-feature{
+        flex-direction: column-reverse;
+        padding: 40px;
+    }
+    .feature-frame{
+        
+        grid-template-columns: repeat(1,1fr);
+    }
+    /* --------blogs  */
+    .blogs{
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+        /* padding: 10px; */
+        flex-wrap: wrap;
+    }
+    /* .blogs-details{
+        flex-wrap: wrap;
+    } */
+    
+    /* .blogs-details .section-title h1{
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 53px;
+            
+    } */
+
+    .btn-secondary{
+        padding: 25px 25px;
+        bottom: -600px;
+        left: 30px;
+        
+    }
+
+    .span3{
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 23px;
+    }
+    /* -------facts  */
+    .fact-cards{
+        flex-wrap: wrap;
+        flex-direction: column; 
+        justify-content: center;
+        gap: 40px;
+    }
+    .fact{
+        padding: 25px 25px;
+        margin: 40px 80px;
+    }
+    /* ------------locations  */
+    .locations {
+        text-align: center;
+        padding: 30px 5px;
+        
+    }
+    .locations div{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .location img{
+        width: 100%;
+    }
+    /* sponspons  */
+    .sponspons-img{
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* footer  */
+    footer{
+        margin:  40px;
+        padding: 25px;
+    }
+    .foot-text{
+        padding: 0px;
     }
 }

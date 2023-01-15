@@ -376,7 +376,7 @@ footer{
 
     /* .top-feature  */
     .top-feature{
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 40px;
     }
     .feature-frame{
